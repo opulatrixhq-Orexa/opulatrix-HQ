@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>OPULATRIX HQ</title>
+<style>
+body{background:#000;color:#FFD700;text-align:center;padding:20px;font-family:Arial}
+button{background:#FFD700;color:#000;font-size:20px;padding:15px 25px;margin:10px;border:none;border-radius:10px;font-weight:bold}
+#status{color:#fff;font-size:20px;margin:20px}
+</style>
+</head>
+<body>
+<h1>OPULATRIX HQ - OREXA</h1>
+<div id="status">TAP TO TALK</div>
+<button onclick="start()">🎙️ TALK</button>
+<script>
+let voiceOn=false,synth=window.speechSynthesis,rec,last="",speaking=false;
+function start(){voiceOn=true;listen();speak("OREXA live brother, talk");}
+function listen(){
+ const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+ rec=new SR();rec.continuous=false;
+ rec.onresult=(e)=>{
+  if(speaking)return;
+  let t=e.results[e.results.length-1][0].transcript.toLowerCase().trim();
+  if(t===last||t.length<2)return;
+  last=t;
+  document.getElementById("status").innerText="YOU: "+t;
+  speak("Got you, "+t);
+ };
+ rec.onend=()=>{if(voiceOn&&!speaking)setTimeout(()=>{try{rec.start()}catch{}},700)};
+ rec.start();
+}
+function speak(txt){
+ if(!voiceOn)return;
+ speaking=true;try{rec.stop()}catch{};synth.cancel();
+ let u=new SpeechSynthesisUtterance(txt);
+ u.onend=()=>{speaking=false;setTimeout(()=>{last="";if(voiceOn)try{rec.start()}catch{}},600)};
+ synth.speak(u);
+}
+</script>
+</body>
+</html>
