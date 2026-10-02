@@ -2,42 +2,56 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>OPULATRIX HQ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPULATRIX HQ - OREXA</title>
 <style>
-body{background:#000;color:#FFD700;text-align:center;padding:20px;font-family:Arial}
-button{background:#FFD700;color:#000;font-size:20px;padding:15px 25px;margin:10px;border:none;border-radius:10px;font-weight:bold}
-#status{color:#fff;font-size:20px;margin:20px}
+body{background:#000;color:#FFD700;font-family:Arial;text-align:center;padding:20px;margin:0}
+h1{font-size:28px;margin-top:30px;letter-spacing:2px}
+#status{color:#fff;font-size:18px;margin:20px;padding:15px;border:1px solid #FFD700;min-height:60px}
+button{background:#FFD700;color:#000;border:none;padding:20px 40px;font-size:22px;font-weight:bold;border-radius:50px;cursor:pointer;margin:20px}
+button:active{transform:scale(0.95)}
+p{color:#aaa;font-size:14px}
 </style>
 </head>
 <body>
 <h1>OPULATRIX HQ - OREXA</h1>
-<div id="status">TAP TO TALK</div>
-<button onclick="start()">🎙️ TALK</button>
+<p>Your AI Concierge</p>
+<div id="status">Tap 🎙️ and say "Book Pullman Monday"</div>
+<button id="btn" onclick="start()">🎙️ GIVE ORDER</button>
+<p id="log"></p>
+
 <script>
-let voiceOn=false,synth=window.speechSynthesis,rec,last="",speaking=false;
-function start(){voiceOn=true;listen();speak("OREXA live brother, talk");}
-function listen(){
- const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
- rec=new SR();rec.continuous=false;
- rec.onresult=(e)=>{
-  if(speaking)return;
-  let t=e.results[e.results.length-1][0].transcript.toLowerCase().trim();
-  if(t===last||t.length<2)return;
-  last=t;
-  document.getElementById("status").innerText="YOU: "+t;
-  speak("Got you, "+t);
- };
- rec.onend=()=>{if(voiceOn&&!speaking)setTimeout(()=>{try{rec.start()}catch{}},700)};
- rec.start();
+const statusDiv = document.getElementById('status');
+const logDiv = document.getElementById('log');
+const synth = window.speechSynthesis;
+
+function speak(text){
+  statusDiv.innerText = text;
+  let u = new SpeechSynthesisUtterance(text);
+  u.rate=1; u.pitch=1;
+  synth.speak(u);
 }
-function speak(txt){
- if(!voiceOn)return;
- speaking=true;try{rec.stop()}catch{};synth.cancel();
- let u=new SpeechSynthesisUtterance(txt);
- u.onend=()=>{speaking=false;setTimeout(()=>{last="";if(voiceOn)try{rec.start()}catch{}},600)};
- synth.speak(u);
+
+function start(){
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if(!SpeechRecognition){
+    speak("Brother, use Chrome on Android. This browser doesn't support voice.");
+    return;
+  }
+  let rec = new SpeechRecognition();
+  rec.lang='en-AU';
+  rec.interimResults=false;
+  rec.onstart = ()=>{ statusDiv.innerText="Listening... Speak now brother"; logDiv.innerText=""; }
+  rec.onresult = (e)=>{
+    let order = e.results[0][0].transcript;
+    logDiv.innerText="You said: "+order;
+    let reply = `Order received. You said ${order}. I'm going off to do it now. I'll report back when it's done.`;
+    speak(reply);
+  }
+  rec.onerror = (e)=>{ statusDiv.innerText="Error: "+e.error+". Tap again."; }
+  rec.start();
 }
+window.onload = ()=>{ speak("OREXA is online brother. Ready for orders."); }
 </script>
 </body>
 </html>
