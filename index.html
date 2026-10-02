@@ -3,211 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OPULATRIX HQ - OREXA GOD MODE</title>
+<title>OPULATRIX HQ - OREXA</title>
 <style>
-:root{--gold:#FFD700;--bg:#000;--card:#111}
-body{background:var(--bg);color:var(--gold);font-family:Arial;margin:0;padding:0}
-header{text-align:center;padding:15px 10px;border-bottom:1px solid #222}
-h1{margin:0;font-size:24px;letter-spacing:2px}
-.sub{color:#888;font-size:12px}
-#brainBar{display:flex;gap:6px;justify-content:center;padding:8px;flex-wrap:wrap}
-.badge{background:#111;border:1px solid #333;color:#fff;font-size:10px;padding:4px 8px;border-radius:12px}
-.badge.on{border-color:var(--gold);color:var(--gold)}
-#status{background:var(--card);color:#fff;text-align:center;padding:12px;margin:10px;border-radius:10px;border:1px solid var(--gold);min-height:20px}
-#chat{max-width:500px;margin:0 auto;height:45vh;overflow-y:auto;padding:10px;display:flex;flex-direction:column;gap:10px;background:#050505;border-radius:12px;border:1px solid #1a1a1a}
-.msg{padding:10px 14px;border-radius:18px;max-width:85%;font-size:14px;line-height:1.4}
-.user{align-self:flex-end;background:var(--gold);color:#000;font-weight:bold}
-.ai{align-self:flex-start;background:#1a1a1a;color:#fff;border:1px solid #333}
-#controls{max-width:500px;margin:10px auto;padding:10px;display:flex;flex-direction:column;gap:10px}
-.row{display:flex;gap:8px}
-input,textarea{flex:1;background:#111;color:#fff;border:1px solid #333;border-radius:25px;padding:12px 15px;font-size:15px}
-button{border:none;border-radius:25px;font-weight:900;cursor:pointer}
-.btn-gold{background:var(--gold);color:#000;padding:12px 20px}
-.btn-dark{background:#111;color:var(--gold);border:1px solid #333;padding:8px 14px;font-size:12px}
-#voiceBtn{width:100%;padding:18px;font-size:20px;border-radius:50px;box-shadow:0 0 20px rgba(255,215,0,0.3)}
-#tasks{max-width:500px;margin:10px auto;background:#0a0a0a;padding:12px;border-radius:12px;border:1px solid #222}
-.task{color:#fff;font-size:13px;padding:6px 0;border-bottom:1px solid #1a1a1a}
-details{max-width:500px;margin:10px auto;background:#111;padding:10px;border-radius:10px}
-summary{color:var(--gold);cursor:pointer}
+body{background:#000;color:#fff;font-family:Arial;margin:0}
+header{background:#111;padding:20px;text-align:center;border-bottom:2px solid #FFD700}
+h1{color:#FFD700;margin:0;font-size:26px}
+#status{background:#1a1a1a;color:#FFD700;padding:15px;margin:10px;border-radius:10px;text-align:center;font-weight:bold;border:1px solid #333}
+#chat{height:40vh;overflow-y:auto;padding:15px;background:#050505;margin:10px;border-radius:15px;border:1px solid #222;display:flex;flex-direction:column;gap:10px}
+.user{align-self:flex-end;background:#FFD700;color:#000;padding:10px 14px;border-radius:18px;max-width:80%;font-weight:bold}
+.ai{align-self:flex-start;background:#222;color:#fff;padding:10px 14px;border-radius:18px;max-width:85%;border:1px solid #333}
+#controls{padding:10px;max-width:500px;margin:auto}
+input{width:70%;padding:14px;border-radius:25px;border:1px solid #333;background:#111;color:#fff}
+button{padding:14px 20px;border-radius:25px;border:none;background:#FFD700;color:#000;font-weight:900}
+#voiceBtn{width:100%;margin-top:12px;padding:20px;font-size:22px;background:radial-gradient(#FFD700,#FFA500);border-radius:50px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.q{padding:12px;background:#111;border:1px solid #333;border-radius:10px;color:#FFD700;text-align:center;font-weight:bold;font-size:12px}
+#log{background:#0a0a0a;margin:10px;padding:12px;border-radius:10px;border:1px solid #222;max-width:500px;margin:auto}
+.task{font-size:12px;color:#ccc;padding:5px 0;border-bottom:1px solid #1a1a1a}
 </style>
 </head>
 <body>
-<header>
-<h1>OPULATRIX HQ - OREXA</h1>
-<div class="sub">GOD MODE - Voice + ChatGPT + Claude + Memory</div>
-<div id="brainBar">
-<span class="badge on" id="b-voice">🎙️ VOICE</span>
-<span class="badge on" id="b-memory">🧠 MEMORY</span>
-<span class="badge on" id="b-tasks">✅ TASKS</span>
-<span class="badge" id="b-gpt">🤖 GPT</span>
-</div>
-</header>
-
-<div id="status">OREXA GOD MODE online brother. I do everything now.</div>
-
-<div id="chat">
-<div class="msg ai">Brother, I'm OREXA GOD MODE. Tell me any order:<br><br>• "Book Pullman Monday"<br>• "CRM" / "Email" / "WhatsApp"<br>• "Remind me to call client"<br>• Or just chat like ChatGPT<br><br>Voice or type - I DO IT, not just talk.</div>
-</div>
-
+<header><h1>OPULATRIX HQ - OREXA</h1><div style="color:#888;font-size:11px">FIXED MODE - NO LOOP - SHE DOES IT</div></header>
+<div id="status">OREXA READY. Tap mic and give 1 order.</div>
+<div id="chat"><div class="ai">Brother I'm FIXED now. No loop. Say: CRM, PULLMAN, EMAIL, WHATSAPP, CALENDAR - I will OPEN it instantly. Try now.</div></div>
 <div id="controls">
-<div class="row">
-<input id="input" placeholder="Order or chat: Book Pullman, What is CRM strategy..." />
-<button class="btn-gold" onclick="sendText()">GO</button>
-</div>
-<button id="voiceBtn" class="btn-gold" onclick="startVoice()">🎙️ HOLD TO GIVE ORDER</button>
-<div class="row" style="justify-content:center;flex-wrap:wrap">
-<button class="btn-dark" onclick="doAction('open crm')">CRM</button>
-<button class="btn-dark" onclick="doAction('book pullman')">PULLMAN</button>
-<button class="btn-dark" onclick="doAction('open email')">EMAIL</button>
-<button class="btn-dark" onclick="doAction('open whatsapp')">WHATSAPP</button>
-<button class="btn-dark" onclick="doAction('calendar')">CALENDAR</button>
+<div style="display:flex;gap:8px"><input id="input" placeholder="Type: CRM, Pullman, Email..."><button onclick="handleText()">GO</button></div>
+<button id="voiceBtn" onclick="startVoice()">🎙️ TAP TO SPEAK</button>
+<div class="grid">
+<div class="q" onclick="doJob('CRM')">📊 CRM</div>
+<div class="q" onclick="doJob('PULLMAN')">🏨 PULLMAN</div>
+<div class="q" onclick="doJob('EMAIL')">📧 EMAIL</div>
+<div class="q" onclick="doJob('WHATSAPP')">💬 WHATSAPP</div>
+<div class="q" onclick="doJob('CALENDAR')">📅 CALENDAR</div>
+<div class="q" onclick="clearLog()">🗑️ CLEAR</div>
 </div>
 </div>
-
-<div id="tasks"><b style="color:var(--gold)">🔥 LIVE TASK MEMORY:</b><div id="taskList"></div></div>
-
-<details>
-<summary>⚙️ Make OREXA Super Smart (Paste API Keys - Optional)</summary>
-<div style="padding:10px;display:flex;flex-direction:column;gap:8px">
-<input id="openaiKey" placeholder="OpenAI API Key (sk-... ) - Makes her like ChatGPT" />
-<textarea id="systemPrompt" rows="3" placeholder="System Prompt: You are OREXA, AI concierge for OPULATRIX...">You are OREXA, the AI concierge for OPULATRIX HQ. You are a powerful business assistant. You help with booking, CRM, emails, tasks. You speak like a loyal brother, concise, direct. You take action, not just talk. Owner is in Melbourne, Australia.</textarea>
-<button class="btn-gold" onclick="saveKeys()">SAVE BRAIN</button>
-<p style="color:#666;font-size:11px">No key? She still works 100% with built-in smart brain. Key just makes her ChatGPT-level.</p>
-</div>
-</details>
-
-<script>
-const chatDiv = document.getElementById('chat');
-const statusDiv = document.getElementById('status');
-const inputEl = document.getElementById('input');
-const taskListEl = document.getElementById('taskList');
-const synth = window.speechSynthesis;
-let tasks = JSON.parse(localStorage.getItem('orexa_god_tasks')||'[]');
-let history = JSON.parse(localStorage.getItem('orexa_god_history')||'[]');
-let openaiKey = localStorage.getItem('orexa_openai')||'';
-document.getElementById('openaiKey').value = openaiKey;
-if(openaiKey) document.getElementById('b-gpt').classList.add('on');
-renderTasks();
-
-function speak(t){ statusDiv.innerText=t; let u=new SpeechSynthesisUtterance(t); u.rate=0.95; synth.cancel(); synth.speak(u); }
-function addMsg(role,text){
-  let d=document.createElement('div'); d.className='msg '+role; d.innerText=text;
-  chatDiv.appendChild(d); chatDiv.scrollTop=chatDiv.scrollHeight;
-  history.push({role,text,time:Date.now()}); localStorage.setItem('orexa_god_history',JSON.stringify(history.slice(-50)));
-}
-function renderTasks(){
-  if(!tasks.length){ taskListEl.innerHTML='<div style="color:#666;padding:10px">No tasks yet</div>'; return; }
-  taskListEl.innerHTML=tasks.slice(0,30).map(t=>`<div class="task"><b style="color:#FFD700">${t.time}</b> ${t.order} <br>→ ${t.action}</div>`).join('');
-}
-function addTask(order,action){
-  tasks.unshift({time:new Date().toLocaleTimeString(), order, action});
-  localStorage.setItem('orexa_god_tasks',JSON.stringify(tasks)); renderTasks();
-}
-function saveKeys(){
-  openaiKey=document.getElementById('openaiKey').value.trim();
-  localStorage.setItem('orexa_openai',openaiKey);
-  localStorage.setItem('orexa_prompt',document.getElementById('systemPrompt').value);
-  if(openaiKey) document.getElementById('b-gpt').classList.add('on');
-  speak('Brain upgraded brother. I am now super smart.');
-  addMsg('ai','✅ Brain saved. OREXA is now connected to GPT brain.');
-}
-
-// GOD BRAIN LOGIC
-async function think(order){
-  let lower=order.toLowerCase();
-
-  // 1. ACTION COMMANDS - DO INSTANTLY
-  if(lower.includes('crm')||lower.includes('leads')||lower.includes('sheet')){
-    addTask(order,'✅ OPENED CRM'); speak('Opening CRM'); window.open('https://docs.google.com/spreadsheets','_blank');
-    return 'CRM opened brother. Your sheets are live.';
-  }
-  if(lower.includes('pullman')||lower.includes('hotel')||lower.includes('book') && lower.includes('hotel')){
-    addTask(order,'✅ OPENED PULLMAN BOOKING'); speak('Opening Pullman'); window.open('https://www.pullmanalbertpark.com.au/','_blank');
-    return 'Pullman Albert Park booking opened. Ready to book Monday.';
-  }
-  if(lower.includes('email')||lower.includes('gmail')){
-    addTask(order,'✅ OPENED EMAIL'); window.open('https://mail.google.com','_blank');
-    return 'Email opened brother.';
-  }
-  if(lower.includes('whatsapp')){
-    addTask(order,'✅ OPENED WHATSAPP'); window.open('https://web.whatsapp.com','_blank');
-    return 'WhatsApp Web opened.';
-  }
-  if(lower.includes('calendar')){
-    addTask(order,'✅ OPENED CALENDAR'); window.open('https://calendar.google.com','_blank');
-    return 'Calendar opened.';
-  }
-  if(lower.includes('remind')||lower.includes('task')||lower.includes('note')||lower.includes('remember')){
-    addTask(order,'✅ SAVED TO MEMORY'); return `Saved brother: "${order}" - I will remember it in your task log forever.`;
-  }
-
-  // 2. IF HAS OPENAI KEY - USE CHATGPT BRAIN
-  if(openaiKey){
-    try{
-      addMsg('ai','🧠 Thinking with GPT brain...');
-      let prompt = document.getElementById('systemPrompt').value;
-      let res = await fetch('https://api.openai.com/v1/chat/completions',{
-        method:'POST',
-        headers:{'Content-Type':'application/json','Authorization':'Bearer '+openaiKey},
-        body:JSON.stringify({
-          model:'gpt-4o-mini',
-          messages:[{role:'system',content:prompt},{role:'user',content:order}],
-          max_tokens:300
-        })
-      });
-      let data = await res.json();
-      let reply = data.choices?.[0]?.message?.content || 'GPT error brother, but I logged your order.';
-      addTask(order,'🧠 GPT ANSWERED');
-      return reply;
-    }catch(e){
-      console.log(e);
-      // fall back to local brain
-    }
-  }
-
-  // 3. LOCAL GOD BRAIN (No key needed - still smart)
-  if(lower.includes('strategy')||lower.includes('opulatrix')||lower.includes('business')){
-    addTask(order,'🧠 BUSINESS STRATEGY GIVEN');
-    return 'Brother, OPULATRIX strategy: 1. Lead gen via OREXA 2. Qualify fast 3. Book Pullman close. I logged this as a task. Want me to open CRM to track it?';
-  }
-  if(lower.includes('hello')||lower.includes('who are you')){
-    return 'I am OREXA GOD MODE brother - Your voice AI concierge. I book, I open CRM, I remember everything, I chat like ChatGPT. Give me any order.';
-  }
-
-  // Default smart reply
-  addTask(order,'✅ LOGGED & UNDERSTOOD');
-  return `Order received brother: "${order}". I logged it, it's in your permanent memory. If you want me to DO something specific with it (open, book, email), say CRM, Pullman, Email, WhatsApp. I'm listening.`;
-}
-
-async function sendText(){
-  let val=inputEl.value.trim(); if(!val) return;
-  addMsg('user',val); inputEl.value='';
-  let reply = await think(val);
-  addMsg('ai',reply); speak(reply);
-}
-
-function doAction(t){ inputEl.value=t; sendText(); }
-
-function startVoice(){
-  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  if(!SR){ speak('Use Chrome on Android for voice brother'); return; }
-  let rec = new SR(); rec.lang='en-AU'; rec.interimResults=false;
-  rec.onstart=()=>{ statusDiv.innerText='🎧 Listening... speak now brother'; }
-  rec.onresult=async(e)=>{
-    let order=e.results[0][0].transcript;
-    addMsg('user','🎙️ '+order);
-    let reply = await think(order);
-    addMsg('ai',reply); speak(reply);
-  };
-  rec.onerror=(e)=>{ statusDiv.innerText='Error: '+e.error+'. Tap again.'; };
-  rec.start();
-}
-
-inputEl.addEventListener('keydown',e=>{ if(e.key==='Enter') sendText(); });
-window.onload=()=>{
-  speak('OREXA God Mode is online brother. I do everything now. Voice, chat, tasks, CRM.');
-  renderTasks();
-};
-</script>
-</body>
-</html>
+<div id="log">
