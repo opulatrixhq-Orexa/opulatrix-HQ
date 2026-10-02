@@ -1,41 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OPULATRIX HQ - OREXA</title>
-<style>
-body{background:#000;color:#fff;font-family:Arial;margin:0}
-header{background:#111;padding:20px;text-align:center;border-bottom:2px solid #FFD700}
-h1{color:#FFD700;margin:0;font-size:26px}
-#status{background:#1a1a1a;color:#FFD700;padding:15px;margin:10px;border-radius:10px;text-align:center;font-weight:bold;border:1px solid #333}
-#chat{height:40vh;overflow-y:auto;padding:15px;background:#050505;margin:10px;border-radius:15px;border:1px solid #222;display:flex;flex-direction:column;gap:10px}
-.user{align-self:flex-end;background:#FFD700;color:#000;padding:10px 14px;border-radius:18px;max-width:80%;font-weight:bold}
-.ai{align-self:flex-start;background:#222;color:#fff;padding:10px 14px;border-radius:18px;max-width:85%;border:1px solid #333}
-#controls{padding:10px;max-width:500px;margin:auto}
-input{width:70%;padding:14px;border-radius:25px;border:1px solid #333;background:#111;color:#fff}
-button{padding:14px 20px;border-radius:25px;border:none;background:#FFD700;color:#000;font-weight:900}
-#voiceBtn{width:100%;margin-top:12px;padding:20px;font-size:22px;background:radial-gradient(#FFD700,#FFA500);border-radius:50px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
-.q{padding:12px;background:#111;border:1px solid #333;border-radius:10px;color:#FFD700;text-align:center;font-weight:bold;font-size:12px}
-#log{background:#0a0a0a;margin:10px;padding:12px;border-radius:10px;border:1px solid #222;max-width:500px;margin:auto}
-.task{font-size:12px;color:#ccc;padding:5px 0;border-bottom:1px solid #1a1a1a}
-</style>
-</head>
-<body>
-<header><h1>OPULATRIX HQ - OREXA</h1><div style="color:#888;font-size:11px">FIXED MODE - NO LOOP - SHE DOES IT</div></header>
-<div id="status">OREXA READY. Tap mic and give 1 order.</div>
-<div id="chat"><div class="ai">Brother I'm FIXED now. No loop. Say: CRM, PULLMAN, EMAIL, WHATSAPP, CALENDAR - I will OPEN it instantly. Try now.</div></div>
-<div id="controls">
-<div style="display:flex;gap:8px"><input id="input" placeholder="Type: CRM, Pullman, Email..."><button onclick="handleText()">GO</button></div>
-<button id="voiceBtn" onclick="startVoice()">🎙️ TAP TO SPEAK</button>
-<div class="grid">
-<div class="q" onclick="doJob('CRM')">📊 CRM</div>
-<div class="q" onclick="doJob('PULLMAN')">🏨 PULLMAN</div>
-<div class="q" onclick="doJob('EMAIL')">📧 EMAIL</div>
-<div class="q" onclick="doJob('WHATSAPP')">💬 WHATSAPP</div>
-<div class="q" onclick="doJob('CALENDAR')">📅 CALENDAR</div>
-<div class="q" onclick="clearLog()">🗑️ CLEAR</div>
-</div>
-</div>
-<div id="log">
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OPULATRIX HQ</title><style>body{background:#000;color:#fff;font-family:Arial;margin:0}header{padding:18px;background:#111;border-bottom:3px solid #FFD700;text-align:center}h1{color:#FFD700;margin:0;font-size:22px}#chat{max-width:520px;margin:10px auto;height:38vh;overflow:auto;background:#0a0a0a;border:1px solid #222;border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:8px;text-align:left}.u{align-self:flex-end;background:#FFD700;color:#000;padding:10px 14px;border-radius:16px;font-weight:900}.a{align-self:flex-start;background:#1a1a1a;border:1px solid #333;padding:10px 14px;border-radius:16px}#bar{max-width:520px;margin:auto;padding:10px;display:flex;gap:6px}input{flex:1;padding:14px;border-radius:25px;border:1px solid #333;background:#111;color:#fff}button{padding:14px 18px;border-radius:25px;border:none;font-weight:900;background:#FFD700;color:#000}#mic{width:94%;margin:8px 3%;padding:20px;background:#FFD700;color:#000;font-size:20px;border-radius:50px;display:block;max-width:520px}.grid{max-width:520px;margin:10px auto;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}.grid button{background:#111;color:#FFD700;border:1px solid #333;padding:12px 16px;border-radius:20px}</style></head><body><header><h1>OPULATRIX HQ - OREXA</h1><div style="color:#00ff88;font-size:11px">● GOD MODE - DOER - NO MORE LOGGING</div></header><div id="chat"><div class="a"><b>BROTHER FINAL FIX IS IN.</b><br>Tap CRM = I OPEN CRM. Tap PULLMAN = I OPEN PULLMAN.<br>No more logging bullshit. I DO IT.</div></div><div id="bar"><input id="in" placeholder="Type: CRM, Pullman, Email..."><button onclick="GO(in.value)">GO</button></div><button id="mic" onclick="VOICE()">🎙️ TAP TO SPEAK - I WILL DO IT</button><div class="grid"><button onclick="GO('CRM')">📊 CRM</button><button onclick="GO('PULLMAN')">🏨 PULLMAN</button><button onclick="GO('EMAIL')">📧 EMAIL</button><button onclick="GO('WHATSAPP')">💬 WHATSAPP</button><button onclick="GO('CALENDAR')">📅 CALENDAR</button></div><script>
+function ADD(t,c){let d=document.createElement('div');d.className=c;d.innerHTML=t;document.getElementById('chat').appendChild(d);document.getElementById('chat').scrollTop=9999}
+function GO(raw){
+ if(!raw) return; raw=raw.trim(); if(!raw) return;
+ ADD('🎙️ '+raw,'u'); document.getElementById('in').value='';
+ let o=raw.toLowerCase();
+ if(o.includes('crm')){ADD('✅ OPENING CRM NOW','a'); location.href='https://docs.google.com/spreadsheets/'; return;}
+ if(o.includes('pullman')){ADD('✅ OPENING PULLMAN NOW','a'); location.href='https://www.pullmanalbertpark.com.au/'; return;}
+ if(o.includes('email')){ADD('✅ OPENING EMAIL NOW','a'); location.href='https://mail.google.com/'; return;}
+ if(o.includes('whatsapp')){ADD('✅ OPENING WHATSAPP NOW','a'); location.href='https://web.whatsapp.com/'; return;}
+ if(o.includes('calendar')){ADD('✅ OPENING CALENDAR NOW','a'); location.href='https://calendar.google.com/'; return;}
+ ADD('✅ DONE: '+raw,'a');
+}
+function VOICE(){
+ let SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+ if(!SR){alert('Open in Chrome');return;}
+ let r=new SR(); r.lang='en-AU'; r.interimResults=false;
+ document.getElementById('mic').innerText='● LISTENING... SAY IT';
+ r.onresult=e=>{ GO(e.results[0][0].transcript); document.getElementById('mic').innerText='🎙️ TAP TO SPEAK - I WILL DO IT'; };
+ r.onerror=()=>{ document.getElementById('mic').innerText='🎙️ TAP TO SPEAK - I WILL DO IT'; };
+ r.start();
+}
+document.getElementById('in').addEventListener('keydown',e=>{if(e.key==='Enter') GO(e.target.value)});
+</script></body></html>
