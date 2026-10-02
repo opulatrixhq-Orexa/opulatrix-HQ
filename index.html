@@ -1,81 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OPULATRIX HQ - MONEY STORE</title>
-<style>
-*{box-sizing:border-box}body{background:#000;color:#FFD700;font-family:Arial;margin:0;padding:10px}
-#head{text-align:center;border:2px solid #FFD700;padding:12px;border-radius:14px}
-#chat{height:25vh;overflow-y:auto;border:1px solid #333;padding:10px;margin:10px 0;border-radius:12px;background:#0a0a0a}
-.u{color:#fff;margin:5px;padding:8px;background:#222;border-radius:12px;text-align:right}
-.a{color:#FFD700;margin:5px;padding:8px;background:#111;border-left:3px solid #FFD700;border-radius:12px;white-space:pre-wrap}
-#row{display:flex;gap:6px}#txt{flex:1;padding:14px;border-radius:25px;border:2px solid #FFD700;background:#111;color:#fff;font-weight:700}
-#send{padding:14px 18px;background:#FFD700;color:#000;font-weight:900;border:none;border-radius:25px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
-.btn{background:#111;color:#FFD700;border:2px solid #FFD700;padding:10px;border-radius:14px;font-weight:900;font-size:11px}
-.btnGold{background:#FFD700;color:#000}
-#desk{border:2px solid #FFD700;border-radius:14px;padding:12px;margin-top:10px;background:#0a0a0a}
-.appCard{background:linear-gradient(145deg,#111,#1a1a1a);border:2px solid #FFD700;border-radius:14px;padding:12px;margin:8px 0}
-.price{font-size:22px;font-weight:900;color:#00ff88} .buy{width:100%;padding:12px;background:#00ff88;color:#000;font-weight:900;border:none;border-radius:12px;margin-top:8px}
-.tag{font-size:9px;padding:3px 7px;border-radius:20px;background:#FFD700;color:#000;font-weight:900}
-</style>
-</head>
-<body>
-<div id="head"><h2 style="margin:0">OPULATRIX HQ - MAKE MONEY NOW</h2><small>YOUR APPS STORE - READY TO SELL TODAY</small></div>
+<title>ORAX $6.99</title>
+<div style="background:#000;color:#fff;font-family:system-ui;text-align:center;padding:30px;min-height:100vh">
+<h1 style="letter-spacing:4px">ORAX</h1>
+<p>ROOMMATE UP - BEST HOUSE FLAVOUR</p>
+<p style="color:#00e5ff;font-weight:800">$6.99 - LOUD HIP HOP SPEAKER BASS</p>
 
-<div id="chat"><div class="a">✅ MONEY STORE READY
-
-We can make money with what you ALREADY GOT.
-
-TYPE:
-- Add app: My Cleaning App $97
-- Show apps
-- Add client John bought Cleaning App
-- Show sales
-
-TAP BUTTONS TO SELL.
-
-No more waiting for laptop. Sell today.</div></div>
-
-<div id="row">
-<input id="txt" placeholder="Type: Add app: My App $97">
-<button id="send" onclick="RUN()">RUN</button>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:320px;margin:30px auto">
+<button style="padding:20px;background:#151515;color:#00e5ff;border:1px solid #333;border-radius:16px;font-weight:900">ECHO</button>
+<button style="padding:20px;background:#151515;color:#00e5ff;border:1px solid #333;border-radius:16px;font-weight:900">WUB</button>
+<button style="padding:20px;background:#151515;color:#00e5ff;border:1px solid #333;border-radius:16px;font-weight:900">RICH</button>
+<button style="padding:20px;background:#151515;color:#00e5ff;border:1px solid #333;border-radius:16px;font-weight:900">FLOW</button>
 </div>
 
-<div class="grid">
-<button class="btn btnGold" onclick="RUN('show apps')">🏪 MY APPS STORE</button>
-<button class="btn btnGold" onclick="RUN('show sales')">💰 SALES</button>
-<button class="btn" onclick="RUN('show clients')">👥 BUYERS</button>
-<button class="btn" onclick="document.getElementById('addAppBox').style.display='block'">➕ ADD NEW APP</button>
+<button style="width:100%;max-width:320px;padding:18px;background:#00e5ff;border:0;border-radius:12px;font-weight:900;font-size:16px">▶ PLAY MONEY BITCHE</button>
+
+<a href="YOUR-STRIPE-6.99-LINK" style="display:block;margin-top:20px;color:#666;font-size:12px">BUY NOW - $6.99</a>
 </div>
-
-<div id="addAppBox" style="display:none;border:2px dashed #FFD700;padding:12px;border-radius:12px;margin-top:10px;background:#111">
-<b>ADD YOUR APP TO SELL:</b><br>
-<input id="appName" placeholder="App Name - e.g. Pullman Cleaner App" style="width:100%;padding:10px;margin:6px 0;border-radius:10px;border:1px solid #FFD700;background:#000;color:#fff">
-<input id="appPrice" placeholder="Price - e.g. 97" type="number" style="width:100%;padding:10px;margin:6px 0;border-radius:10px;border:1px solid #FFD700;background:#000;color:#fff">
-<input id="appLink" placeholder="Stripe/PayPal Link - e.g. https://buy.stripe.com/..." style="width:100%;padding:10px;margin:6px 0;border-radius:10px;border:1px solid #FFD700;background:#000;color:#fff">
-<textarea id="appDesc" placeholder="What does app do? - e.g. Organizes cleaners..." style="width:100%;padding:10px;margin:6px 0;border-radius:10px;border:1px solid #FFD700;background:#000;color:#fff;height:60px"></textarea>
-<button onclick="addAppManual()" style="width:100%;padding:12px;background:#FFD700;color:#000;font-weight:900;border:none;border-radius:12px">ADD APP TO STORE NOW</button>
-</div>
-
-<div id="desk">Loading your money store...</div>
-
-<script>
-let data = JSON.parse(localStorage.getItem('opu_money')||'{"apps":[],"sales":[],"clients":[]}');
-const chat=document.getElementById('chat'), desk=document.getElementById('desk'), input=document.getElementById('txt');
-
-function ADD(t,c){let d=document.createElement('div');d.className=c;d.innerText=t;chat.appendChild(d);chat.scrollTop=9999}
-function SAVE(){localStorage.setItem('opu_money',JSON.stringify(data))}
-function TALK(t){try{speechSynthesis.speak(new SpeechSynthesisUtterance(t))}catch(e){}}
-
-function renderStore(){
- if(data.apps.length==0){
-  desk.innerHTML=`<div style="text-align:center;padding:20px"><b>NO APPS YET - ADD ONE NOW</b><br><br>You said you got ideas through him - add them here and sell today.<br><br>Type: <i>Add app: Cleaning System $97</i><br>Or tap ADD NEW APP above</div>`;
-  return;
- }
- let html=`<b>🏪 YOUR APPS FOR SALE (${data.apps.length}) - READY TO MAKE MONEY:</b><br>`;
- data.apps.forEach((app,i)=>{
-  html+=`<div class="appCard">
-   <div style="display:flex;justify-content:space-between"><b>${app.name}</b><span class="tag">${app.sales||0} sales</span></div>
-   <div style="color:#888;font-size:12px;margin:6px 0">${app.desc}</div>
-   <div class="price">$
