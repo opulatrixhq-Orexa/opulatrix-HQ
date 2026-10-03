@@ -1,53 +1,107 @@
 <!DOCTYPE html>
-<html><head><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ORAX</title>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPULATRIX HQ - OREXA | ORAX + HONEYVOLT DESIGN</title>
 <style>
-body{background:#0a0a0a;color:#fff;font-family:Arial;text-align:center;padding:20px;margin:0}
-h1{font-size:36px;letter-spacing:6px;margin:20px 0 5px;font-weight:900}
-.sub{color:#00ffff;font-size:11px;letter-spacing:3px;margin-bottom:25px}
-.meter{height:6px;background:#222;max-width:360px;margin:0 auto 20px;border-radius:10px;overflow:hidden}
-.meter div{height:100%;width:0%;background:linear-gradient(90deg,#00ffff,#ff0066);transition:width .08s}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;max-width:360px;margin:0 auto}
-.btn{background:#1a1a1a;border:2px solid #333;border-radius:16px;padding:30px 10px;font-size:18px;font-weight:900;letter-spacing:2px;color:#fff;cursor:pointer}
-.btn:active{transform:scale(.96)}
-.btn small{display:block;font-size:10px;font-weight:400;margin-top:8px;color:#999;letter-spacing:1px}
-#echo{border-color:#00ffff} #wub{border-color:#ff0066} #rich{border-color:#ffcc00} #flow{border-color:#00ff88}
-.buy{display:block;max-width:360px;margin:30px auto;background:#fff;color:#000;padding:18px;border-radius:50px;font-weight:900;font-size:20px;text-decoration:none;letter-spacing:1px}
-.buy span{display:block;font-size:11px;font-weight:400;margin-top:5px;color:#444}
-.foot{color:#555;font-size:11px;margin-top:25px;max-width:360px;margin-left:auto;margin-right:auto;line-height:1.5}
-.badge{display:inline-block;background:#111;border:1px solid #222;padding:6px 12px;border-radius:20px;font-size:10px;color:#777;margin-bottom:15px}
-</style></head><body>
-<div class="badge">ANTI-PEAK LIMITER ACTIVE - WUB CAPPED AT -6dB</div>
-<h1>ORAX</h1><div class="sub">ROOMMATE UP // BEST HOUSE FLAVOUR</div>
-<div class="meter"><div id="level"></div></div>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#08080c;color:#fff;font-family:'Inter',sans-serif;display:flex;justify-content:center}
+.wrap{width:100%;max-width:430px;background:#0e0e12;min-height:100vh;padding:14px 14px 30px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:12px 0}
+.card{background:#111114;border:1.5px solid #222;border-radius:16px;padding:18px 10px;text-align:center}
+.card.echo{border-color:#00f5ff;box-shadow:0 0 12px rgba(0,245,255,0.15)}
+.card.wub{border-color:#ff2d78;box-shadow:0 0 12px rgba(255,45,120,0.15)}
+.card.rich{border-color:#ffcc00;box-shadow:0 0 12px rgba(255,204,0,0.15)}
+.card.flow{border-color:#00ff88;box-shadow:0 0 12px rgba(0,255,136,0.15)}
+.card h3{font-family:'Orbitron';font-size:15px;letter-spacing:1px;margin-bottom:4px}
+.card p{font-size:9px;opacity:0.6;letter-spacing:1px}
+.buy-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.design-card{background:#111114;border:1.5px solid #ffcc00;border-radius:20px;padding:18px 14px}
+.design-card h2{font-family:'Orbitron';color:#ffcc00;font-size:18px;line-height:1.1}
+.design-card .sub{font-size:11px;margin:10px 0;line-height:1.4;opacity:0.85}
+.price{font-family:'Orbitron';color:#ffcc00;font-size:20px;margin:12px 0 10px}
+.btn-yellow{background:#ffcc00;color:#000;border:none;width:100%;padding:14px 10px;border-radius:30px;font-family:'Orbitron';font-weight:900;font-size:12px;cursor:pointer}
+.white-card{background:#ffffff;color:#000;border-radius:24px;padding:18px 14px;text-align:center}
+.white-card h2{font-family:'Orbitron';font-size:18px}
+.white-card .small{font-size:10px;margin:6px 0;opacity:0.7}
+.badge{background:#f5f5f5;border-radius:20px;padding:8px 12px;font-size:10px;margin-top:8px;display:inline-block}
+.header{text-align:center;padding:10px 0 6px;font-family:'Orbitron';color:#00f5ff;font-size:10px;letter-spacing:2px;opacity:0.7}
+.footer{margin-top:24px;text-align:center;font-size:9px;opacity:0.4;line-height:1.5}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="header">OPULATRIX HQ - ORAX ENGINE + HONEYVOLT DESIGN</div>
+
 <div class="grid">
-<button class="btn" id="echo" onclick="play('echo')">ECHO<small>HIGH CUT</small></button>
-<button class="btn" id="wub" onclick="play('wub')">WUB<small>60HZ BASS - LOUD SAFE</small></button>
-<button class="btn" id="rich" onclick="play('rich')">RICH<small>BRIGHT AIR</small></button>
-<button class="btn" id="flow" onclick="play('flow')">FLOW<small>220HZ PUNCH</small></button>
- <!-- HONEYVOLT PRODUCT -->
-<div style="background:#0a0a0a; border:2px solid #FFC300; border-radius:20px; padding:20px; margin:20px; text-align:center;">
-  <img src="HONEYVOLT_IMAGE_URL" style="width:100%; border-radius:15px;">
-  <h2 style="color:#FFC300;">HONEYVOLT HPB-5000</h2>
-  <p style="color:white; font-size:14px;">Biomimetic Honeycomb Solid-State Battery. 5000mAh / 18.5Wh. The honey pot is the battery.</p>
-  <p style="color:#FFC300; font-size:22px; font-weight:bold;">$49.99 AUD</p>
-  <a href="https://www.paypal.me/ShaunPiscopo53/49.99AUD" style="display:block; background:#FFC300; color:black; padding:15px; border-radius:30px; text-decoration:none; font-weight:bold;">BUY HONEYVOLT NOW</a>
+<div class="card echo"><h3>ECHO</h3><p>HIGH CUT</p></div>
+<div class="card wub"><h3>WUB</h3><p>60HZ BASS - LOUD SAFE</p></div>
+<div class="card rich"><h3>RICH</h3><p>BRIGHT AIR</p></div>
+<div class="card flow"><h3>FLOW</h3><p>220HZ PUNCH</p></div>
 </div>
-<a class="buy" href="https://www.paypal.me/ShaunPiscopo53/6.99AUD" target="_blank">BUY NOW $6.99<span>TAP TO PAY - PayPal Secure<br>pinnireapozoid@gmail.com</span></a>
-<div class="foot">DEMO preview limited. Full pack unlocks instantly after $6.99 PayPal payment.<br>WUB is volume-limited so it never red-lines.<br><br>Contact: pinnireapozoid@gmail.com<br>PayPal: PayPal.me/ShaunPiscopo53</div>
+
+<div class="buy-row">
+<div class="design-card">
+<div style="text-align:center;font-size:20px">🍯</div>
+<h2>HONEYVOLT<br>HPB-5000</h2>
+<div class="sub">
+<b>DESIGN LICENSE - NOT PHYSICAL</b><br>
+Biomimetic Honeycomb Solid-State Battery <b>Blueprint</b>.<br>
+The honey pot is the battery.<br><br>
+Includes:<br>
+• Family Pack (Dad/Mum/Baby)<br>
+• Hive Stack + Flat Hex Wrap<br>
+• Queen Bee Buttons + Sewable Cell<br>
+• Concept Images + CAD Idea
+</div>
+<div class="price">$49.99 AUD</div>
+<button class="btn-yellow" onclick="buy('honeyvolt')">BUY BLUEPRINT NOW</button>
+<div style="font-size:8px;margin-top:8px;opacity:0.5;text-align:center">Instant download after PayPal - IP License</div>
+</div>
+
+<div class="white-card">
+<h2>BUY DESIGN ACCESS<br>$6.99</h2>
+<div class="small">ORAX ENGINE<br>Wave Cleaner Blueprint<br>TAP TO PAY - PayPal Secure<br><b>pinnireapozoid@gmail.com</b></div>
+<button class="btn-yellow" onclick="buy('orax')" style="margin-top:10px">BUY ORAX BLUEPRINT</button>
+<div class="badge">Design License - Digital Access<br>No physical shipping - You get idea + UI + images</div>
+<div style="margin-top:12px;font-size:9px;opacity:0.6">OPULATRIX HQ<br>Sine Wave + Honey Pot = Stored Energy<br>Melbourne 2026</div>
+</div>
+</div>
+
+<div class="footer">
+YES = DONE<br>
+We are selling the PRODUCT IDEA - The Design / IP / Blueprint<br>
+Not shipping batteries. You license the concept to build.<br>
+PayPal direct to server - pinnireapozoid@gmail.com<br>
+ulatrixhq-orexa.github.io
+</div>
+
+<!-- PAYPAL FORMS - DIRECT TO PAYPAL SERVER -->
+<form id="pp_honey" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="pinnireapozoid@gmail.com">
+<input type="hidden" name="item_name" value="HONEYVOLT HPB-5000 - DESIGN LICENSE / BLUEPRINT - OPULATRIX HQ">
+<input type="hidden" name="amount" value="49.99">
+<input type="hidden" name="currency_code" value="AUD">
+</form>
+
+<form id="pp_orax" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="pinnireapozoid@gmail.com">
+<input type="hidden" name="item_name" value="ORAX ENGINE - DESIGN ACCESS / BLUEPRINT - OPULATRIX HQ">
+<input type="hidden" name="amount" value="6.99">
+<input type="hidden" name="currency_code" value="USD">
+</form>
+
+</div>
+
 <script>
-let ctx; let meter=document.getElementById('level');
-function init(){ if(!ctx) ctx=new (window.AudioContext||window.webkitAudioContext)(); }
-function play(type){
- init(); const osc=ctx.createOscillator(); const gain=ctx.createGain(); const filter=ctx.createBiquadFilter();
- const limiter=ctx.createDynamicsCompressor(); limiter.threshold.value=-6; limiter.ratio.value=20; limiter.attack.value=0.003; limiter.release.value=0.2;
- let vol=0.3;
- if(type==='wub'){ osc.frequency.value=58; osc.type='sine'; filter.type='lowpass'; filter.frequency.value=110; vol=0.28; meter.style.width='82%'; }
- else if(type==='flow'){ osc.frequency.value=220; osc.type='sawtooth'; filter.type='bandpass'; filter.frequency.value=250; vol=0.32; meter.style.width='60%'; }
- else if(type==='echo'){ osc.frequency.value=1300; osc.type='triangle'; filter.type='highpass'; filter.frequency.value=1100; vol=0.3; meter.style.width='50%'; }
- else { osc.frequency.value=3800; osc.type='sine'; filter.type='highpass'; filter.frequency.value=3000; vol=0.28; meter.style.width='45%'; }
- gain.gain.setValueAtTime(vol,ctx.currentTime); gain.gain.exponentialRampToValueAtTime(0.01,ctx.currentTime+0.7);
- osc.connect(filter); filter.connect(gain); gain.connect(limiter); limiter.connect(ctx.destination);
- osc.start(); osc.stop(ctx.currentTime+0.75); setTimeout(()=>meter.style.width='0%',250);
+function buy(which){
+  if(which==='honeyvolt') document.getElementById('pp_honey').submit();
+  else document.getElementById('pp_orax').submit();
 }
-</script></body></html>
+</script>
+</body>
+</html>
