@@ -1,60 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OPULATIX // OREXA - PRIVATE</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#E5B73A">
 <style>
-.bay{border:1px solid rgba(255,255,255,.08);background:#0A0A0B}
-.gold{color:#E5B73A}
+*{box-sizing:border-box} html,body{margin:0;background:#050507;color:#fff;font-family:monospace;height:100dvh;overflow:hidden}
+.wrap{width:392px;max-width:96vw;margin:0 auto;height:100dvh;display:flex;flex-direction:column;gap:8px;padding:10px}
+.top,.hero,.card,.payrow,.inputbox{border:1px solid #1E1E20;background:linear-gradient(180deg,#111113,#0A0A0B);border-radius:14px;box-shadow:0 0 0 1px #000 inset}
+.top{padding:11px 14px;display:flex;justify-content:space-between;align-items:center}
+.gold{color:#E8C15A;font-weight:900}
+.hero{padding:12px 14px}
+.hero .title{font-size:18px;line-height:.95;letter-spacing:.5px;font-weight:900}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.card{padding:10px 11px;pointer-events:none;user-select:none}
+.card b{font-size:11px;display:block;margin-bottom:2px}
+.card span{font-size:8.5px;color:#8A8A8E}
+.payrow{border-color:#E8C15A;padding:11px 12px;display:flex;justify-content:space-between;align-items:center}
+.paybtn{background:#E8C15A;color:#000;text-decoration:none;font-weight:900;font-size:12px;padding:9px 18px;border-radius:10px}
+.inputbox{padding:8px;display:flex;gap:8px}
+.inputbox input{flex:1;background:#000;border:1px solid #222;border-radius:10px;color:#fff;padding:10px;font-size:11px;outline:none}
+.inputbox input:focus{border-color:#E8C15A}
+.inputbox button{background:#fff;color:#000;border:0;border-radius:10px;padding:0 16px;font-weight:900}
 </style>
 </head>
-<body class="bg-black text-white font-mono">
-<div id="app" class="max-w-[480px] mx-auto p-4 pb-32">
+<body>
+<div class="wrap">
+<div class="top"><span class="gold" style="font-size:12px">OPULATIX // OREXA</span><span style="background:#E8C15A;color:#000;font-size:7px;padding:4px 8px;border-radius:99px;font-weight:900">OWNER</span></div>
 
-<div class="flex justify-between items-center py-4">
-<h1 class="font-black text-xl gold">OPULATIX // OREXA</h1>
-<span id="ownerBadge" class="text-[10px] bg-yellow-400 text-black px-2 py-1 rounded font-bold">OWNER GOD MODE</span>
+<div class="hero">
+<div class="title gold">YOUR PRIVATE<br>SHOP</div>
+<div style="font-size:8.5px;color:#777;margin-top:4px">Runs on THIS phone only. 0% server.</div>
 </div>
 
-<!-- CARD 1: HERO -->
-<div class="bay rounded-[24px] p-6">
-<h2 class="text-3xl font-black leading-none">YOUR PRIVATE<br><span class="gold">SHOP</span></h2>
-<p class="text-xs text-gray-400 mt-2">Runs on THIS phone only. 0% server.</p>
+<div class="grid">
+<div class="card"><b class="gold">01 AOI</b><span>Private Camera + Scan</span></div>
+<div class="card"><b class="gold">02 PROOF</b><span>Hash + Timestamp</span></div>
+<div class="card"><b class="gold">03 BATTERY</b><span>Super Build</span></div>
+<div class="card"><b class="gold">04 COLLAR</b><span>ID Tracker</span></div>
+<div class="card"><b class="gold">05 BOOST</b><span>Antenna + 4G</span></div>
+<div class="card"><b class="gold">06 YARD</b><span>Backyard Test</span></div>
 </div>
 
-<!-- CARD 2: 7 CARDS GRID - YOUR DESIGN -->
-<div class="grid grid-cols-2 gap-3 mt-4">
-<div class="bay rounded-[20px] p-4"><div class="gold font-bold">01 AOI</div><div class="text-[11px] text-gray-400">Private Camera + Scan</div></div>
-<div class="bay rounded-[20px] p-4"><div class="gold font-bold">02 PROOF</div><div class="text-[11px] text-gray-400">Hash + Timestamp</div></div>
-<div class="bay rounded-[20px] p-4"><div class="gold font-bold">03 BATTERY</div><div class="text-[11px] text-gray-400">Jaycar Build</div></div>
-<div class="bay rounded-[20px] p-4"><div class="gold font-bold">04 COLLAR</div><div class="text-[11px] text-gray-400">CB Tracker</div></div>
-<div class="bay rounded-[20px] p-4"><div class="gold font-bold">05 BOOST</div><div class="text-[11px] text-gray-400">RX Antenna + LNA</div></div>
-<div class="bay rounded-[20px] p-4"><div class="gold font-bold">06 YARD</div><div class="text-[11px] text-gray-400">Backyard Test</div></div>
-<div class="col-span-2 bay rounded-[20px] p-4 border-yellow-400/30"><div class="gold font-bold">07 SHARK TANK</div><div class="text-[11px] text-gray-400">Video Proof Ready</div></div>
-</div>
+<div class="payrow"><div><b class="gold" style="font-size:11px">07 SHARK TANK</b><div style="font-size:8px;color:#999">Video Proof Drop</div></div><a class="paybtn" href="#">PAY</a></div>
 
-<!-- CARD 3: PULLDOWN PAY BAR - THE KEY -->
-<div class="bay rounded-[24px] p-5 border-yellow-400/40 bg-[#111113] mt-4">
-<div class="text-yellow-400 font-bold text-xs">PAY BAR // PULLDOWN - ALL MONEY TO YOU</div>
-
-<div class="mt-4 relative">
-<button onclick="togglePay()" class="w-full bg-yellow-400 text-black py-4 rounded-[16px] font-black text-lg flex justify-between px-6 items-center">
-<span>💳 PAY WITH ANYTHING</span><span id="arrow">▼</span>
-</button>
-<div id="payDrop" class="hidden absolute z-20 w-full mt-2 bg-[#1A1A1A] border border-white/10 rounded-[16px] overflow-hidden shadow-2xl">
-<button onclick="payWith('paypal')" class="w-full text-left px-6 py-4 hover:bg-white/5 flex justify-between border-b border-white/5"><span>🅿️ PayPal</span><span class="text-xs text-gray-500">to YOU</span></button>
-<button onclick="payWith('stripe')" class="w-full text-left px-6 py-4 hover:bg-white/5 flex justify-between border-b border-white/5"><span>💳 Card / Stripe</span><span class="text-xs text-gray-500">to YOU</span></button>
-<button onclick="payWith('crypto')" class="w-full text-left px-6 py-4 hover:bg-white/5 flex justify-between border-b border-white/5"><span>₿ Crypto / BTC</span><span class="text-xs text-gray-500">to YOU</span></button>
-<button onclick="payWith('cashapp')" class="w-full text-left px-6 py-4 hover:bg-white/5 flex justify-between"><span>💵 Cash App</span><span class="text-xs text-gray-500">to YOU</span></button>
+<div class="inputbox"><input id="pp" placeholder="PayPal email"><button onclick="localStorage.setItem('pp',document.getElementById('pp').value);alert('LOCKED')">LOCK</button></div>
 </div>
-</div>
-<div class="mt-3 text-[11px] text-gray-500 text-center">Customer pushes pulldown → picks one → pays OWNER direct.</div>
-</div>
-
-<!-- CARD 4: OWNER LOCK - 4 WALLET -->
-<div id="ownerPanel" class="bay rounded-[24px] p-5 mt-4">
-<div class="gold font-bold text-xs">OWNER LOCK //
+</body>
+</html>
