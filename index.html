@@ -2,105 +2,59 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OPULATRIX HQ - HONEYVOLT + ORAX</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OPULATIX // OREXA - PRIVATE</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#E5B73A">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Inter:wght@400;600&display=swap');
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#000;color:#fff;font-family:'Inter',sans-serif;display:flex;justify-content:center}
-.wrap{width:100%;max-width:460px;background:#08080a;padding:12px 12px 30px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
-.card{background:#111;border:1.5px solid #222;border-radius:18px;padding:18px 8px;text-align:center}
-.card.echo{border-color:#00f5ff}.card.wub{border-color:#ff2d78}.card.rich{border-color:#ffcc00}.card.flow{border-color:#00ff88}
-.card h3{font-family:'Orbitron';font-size:15px}.card p{font-size:10px;opacity:.6;margin-top:2px;letter-spacing:1px}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
-.left{background:#0f0f0f;border:1.5px solid #ffcc00;border-radius:22px;padding:16px 12px}
-.right{background:#fff;color:#000;border-radius:22px;padding:16px 12px;text-align:center}
-.badge{font-family:'Orbitron';font-size:22px;color:#ffcc00;line-height:1;letter-spacing:1px}
-.badge span{font-size:12px}
-.sub{font-size:11px;line-height:1.35;opacity:.9;margin:10px 0}
-.tier{border:1px solid #252525;border-radius:14px;padding:10px;margin:10px 0;background:#0a0a0a}
-.tier.gold{border-color:#ffcc00;background:linear-gradient(180deg,#1c1800 0%,#0a0a0a 100%)}
-.tier.white{border-color:#fff;background:#151515}
-.tier h4{font-family:'Orbitron';font-size:11px;color:#fff}
-.tier p{font-size:9px;opacity:.65;margin:4px 0 8px;line-height:1.3}
-.price{font-family:'Orbitron';color:#ffcc00;font-size:16px}
-.btn{width:100%;padding:11px;border:none;border-radius:30px;font-family:'Orbitron';font-weight:900;font-size:10px;cursor:pointer;margin-top:6px}
-.btn.yellow{background:#ffcc00;color:#000}
-.btn.white{background:#fff;color:#000}
-.btn.black{background:#000;color:#fff}
-.note{font-size:8px;opacity:.5;text-align:center;margin-top:10px;line-height:1.4}
-.footer{text-align:center;font-size:8px;opacity:.3;margin-top:18px;line-height:1.6}
+.bay{border:1px solid rgba(255,255,255,.08);background:#0A0A0B}
+.gold{color:#E5B73A}
 </style>
 </head>
-<body>
-<div class="wrap">
+<body class="bg-black text-white font-mono">
+<div id="app" class="max-w-[480px] mx-auto p-4 pb-32">
 
-<div class="grid">
-<div class="card echo"><h3>ECHO</h3><p>HIGH CUT</p></div>
-<div class="card wub"><h3>WUB</h3><p>60HZ BASS - LOUD SAFE</p></div>
-<div class="card rich"><h3>RICH</h3><p>BRIGHT AIR</p></div>
-<div class="card flow"><h3>FLOW</h3><p>220HZ PUNCH</p></div>
+<div class="flex justify-between items-center py-4">
+<h1 class="font-black text-xl gold">OPULATIX // OREXA</h1>
+<span id="ownerBadge" class="text-[10px] bg-yellow-400 text-black px-2 py-1 rounded font-bold">OWNER GOD MODE</span>
 </div>
 
-<div class="split">
-<div class="left">
-<div style="text-align:center">🍯</div>
-<div class="badge">HONEYVOLT<br>HPB-5000</div>
-<div class="sub"><b>DESIGN LICENSE - NOT PHYSICAL</b><br>Biomimetic Honeycomb Solid-State Battery Blueprint.<br>The honey pot is the battery.<br><br>Includes:<br>• Family Pack (Dad/Mum/Baby)<br>• Hive Stack + Flat Hex Wrap<br>• Queen Bee Buttons + Sewable Cell<br>• Concept Images + CAD Idea</div>
-
-<div class="tier gold">
-<h4>TIER 1 - PERSONAL CONCEPT</h4>
-<p>Study, portfolio, personal build. No mass manufacture.</p>
-<div class="price">$49.99 AUD</div>
-<button class="btn yellow" onclick="pay('honey1')">BUY TIER 1 - $49.99</button>
+<!-- CARD 1: HERO -->
+<div class="bay rounded-[24px] p-6">
+<h2 class="text-3xl font-black leading-none">YOUR PRIVATE<br><span class="gold">SHOP</span></h2>
+<p class="text-xs text-gray-400 mt-2">Runs on THIS phone only. 0% server.</p>
 </div>
 
-<div class="tier">
-<h4>TIER 2 - STARTUP BUILDER</h4>
-<p>Build up to 1,000 units. Small business / prototype.</p>
-<div class="price">$499 AUD</div>
-<button class="btn yellow" onclick="pay('honey2')">BUY TIER 2 - $499</button>
+<!-- CARD 2: 7 CARDS GRID - YOUR DESIGN -->
+<div class="grid grid-cols-2 gap-3 mt-4">
+<div class="bay rounded-[20px] p-4"><div class="gold font-bold">01 AOI</div><div class="text-[11px] text-gray-400">Private Camera + Scan</div></div>
+<div class="bay rounded-[20px] p-4"><div class="gold font-bold">02 PROOF</div><div class="text-[11px] text-gray-400">Hash + Timestamp</div></div>
+<div class="bay rounded-[20px] p-4"><div class="gold font-bold">03 BATTERY</div><div class="text-[11px] text-gray-400">Jaycar Build</div></div>
+<div class="bay rounded-[20px] p-4"><div class="gold font-bold">04 COLLAR</div><div class="text-[11px] text-gray-400">CB Tracker</div></div>
+<div class="bay rounded-[20px] p-4"><div class="gold font-bold">05 BOOST</div><div class="text-[11px] text-gray-400">RX Antenna + LNA</div></div>
+<div class="bay rounded-[20px] p-4"><div class="gold font-bold">06 YARD</div><div class="text-[11px] text-gray-400">Backyard Test</div></div>
+<div class="col-span-2 bay rounded-[20px] p-4 border-yellow-400/30"><div class="gold font-bold">07 SHARK TANK</div><div class="text-[11px] text-gray-400">Video Proof Ready</div></div>
 </div>
 
-<div class="tier white">
-<h4>TIER 3 - COMMERCIAL IP</h4>
-<p>Unlimited manufacture. Full license to build & sell. IP stays OPULATRIX HQ.</p>
-<div class="price" style="color:#fff">$4,999 AUD</div>
-<button class="btn white" onclick="pay('honey3')">BUY TIER 3 - $4,999</button>
-</div>
+<!-- CARD 3: PULLDOWN PAY BAR - THE KEY -->
+<div class="bay rounded-[24px] p-5 border-yellow-400/40 bg-[#111113] mt-4">
+<div class="text-yellow-400 font-bold text-xs">PAY BAR // PULLDOWN - ALL MONEY TO YOU</div>
 
-<div class="note">All tiers = Digital Blueprint Only<br>Instant download after PayPal<br>pinnireapozoid@gmail.com</div>
-</div>
-
-<div class="right">
-<div style="font-family:'Orbitron';font-weight:900;font-size:20px;line-height:1.1">BUY DESIGN<br>ACCESS<br>$6.99</div>
-<div style="font-size:10px;opacity:.7;margin:8px 0;line-height:1.3">ORAX ENGINE<br>Wave Cleaner Blueprint<br>TAP TO PAY - PayPal Secure<br><b>pinnireapozoid@gmail.com</b></div>
-<button class="btn yellow" onclick="pay('orax')" style="font-size:11px;padding:14px">BUY ORAX<br>BLUEPRINT</button>
-<div style="font-size:9px;opacity:.6;margin-top:14px;line-height:1.4;background:#f2f2f2;padding:10px;border-radius:12px">Design License -<br>Digital Access<br>No physical shipping -<br>You get idea + UI + images<br><br>OPULATRIX HQ<br>Sine Wave + Honey Pot =<br>Stored Energy<br>Melbourne 2026</div>
+<div class="mt-4 relative">
+<button onclick="togglePay()" class="w-full bg-yellow-400 text-black py-4 rounded-[16px] font-black text-lg flex justify-between px-6 items-center">
+<span>💳 PAY WITH ANYTHING</span><span id="arrow">▼</span>
+</button>
+<div id="payDrop" class="hidden absolute z-20 w-full mt-2 bg-[#1A1A1A] border border-white/10 rounded-[16px] overflow-hidden shadow-2xl">
+<button onclick="payWith('paypal')" class="w-full text-left px-6 py-4 hover:bg-white/5 flex justify-between border-b border-white/5"><span>🅿️ PayPal</span><span class="text-xs text-gray-500">to YOU</span></button>
+<button onclick="payWith('stripe')" class="w-full text-left px-6 py-4 hover:bg-white/5 flex justify-between border-b border-white/5"><span>💳 Card / Stripe</span><span class="text-xs text-gray-500">to YOU</span></button>
+<button onclick="payWith('crypto')" class="w-full text-left px-6 py-4 hover:bg-white/5 flex justify-between border-b border-white/5"><span>₿ Crypto / BTC</span><span class="text-xs text-gray-500">to YOU</span></button>
+<button onclick="payWith('cashapp')" class="w-full text-left px-6 py-4 hover:bg-white/5 flex justify-between"><span>💵 Cash App</span><span class="text-xs text-gray-500">to YOU</span></button>
 </div>
 </div>
-
-<div class="footer">YES = DONE - We sell the PRODUCT IDEA / DESIGN / IP / BLUEPRINT - Not shipping batteries.<br>OPULATRIX HQ owns 100% - ulatrixhq-orexa.github.io<br>Sine Wave + Honey Pot = Stored Energy</div>
-
-<!-- PAYPAL DIRECT TO YOUR SERVER -->
-<form id="pp_honey1" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
-<input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="pinnireapozoid@gmail.com">
-<input type="hidden" name="item_name" value="HONEYVOLT TIER 1 PERSONAL - DESIGN LICENSE"><input type="hidden" name="amount" value="49.99"><input type="hidden" name="currency_code" value="AUD"></form>
-
-<form id="pp_honey2" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
-<input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="pinnireapozoid@gmail.com">
-<input type="hidden" name="item_name" value="HONEYVOLT TIER 2 STARTUP BUILDER - 1000 UNITS LICENSE"><input type="hidden" name="amount" value="499"><input type="hidden" name="currency_code" value="AUD"></form>
-
-<form id="pp_honey3" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
-<input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="pinnireapozoid@gmail.com">
-<input type="hidden" name="item_name" value="HONEYVOLT TIER 3 COMMERCIAL IP LICENSE"><input type="hidden" name="amount" value="4999"><input type="hidden" name="currency_code" value="AUD"></form>
-
-<form id="pp_orax" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none">
-<input type="hidden" name="cmd" value="_xclick"><input type="hidden" name="business" value="pinnireapozoid@gmail.com">
-<input type="hidden" name="item_name" value="ORAX ENGINE - DESIGN ACCESS"><input type="hidden" name="amount" value="6.99"><input type="hidden" name="currency_code" value="USD"></form>
-
+<div class="mt-3 text-[11px] text-gray-500 text-center">Customer pushes pulldown → picks one → pays OWNER direct.</div>
 </div>
-<script>function pay(id){document.getElementById('pp_'+id).submit();}</script>
-</body>
-  </html>
+
+<!-- CARD 4: OWNER LOCK - 4 WALLET -->
+<div id="ownerPanel" class="bay rounded-[24px] p-5 mt-4">
+<div class="gold font-bold text-xs">OWNER LOCK //
