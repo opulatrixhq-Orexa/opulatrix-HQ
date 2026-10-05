@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OPULATIX // OREXA</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;min-height:100vh;background:#000;color:#fff;font-family:monospace}
+.app{width:100%;min-height:100vh;background:radial-gradient(900px 600px at 50% 0%,#1A1A2E 0%,#000 60%)}
+.top{height:50px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;border-bottom:1px solid #222}
+.top b{font-size:10px;letter-spacing:3px;color:#F0D06A}
+.big{padding:16px;font-size:32px;font-weight:900;line-height:.9;text-shadow:0 2px 0 #666,0 4px 10px #000,0 0 20px #F0D06A66;transform:perspective(400px) rotateX(10deg)}
+.payid{margin:10px 14px;padding:10px;border:1px dashed #F0D06A55;border-radius:10px;display:flex;justify-content:space-between;background:#111}
+.payid b{color:#F0D06A;font-size:8px} .payid span{font-size:10px}
+.list{padding:10px;display:flex;flex-direction:column;gap:8px}
+.row{display:flex;justify-content:space-between;align-items:center;padding:13px;border:1px solid #222;border-radius:14px;background:#0E0E18}
+.row.hot{border-color:#F0D06A33} .row.cold{border-color:#5CC8DF22}
+.row b{font-size:11px} .row s{font-size:7px;color:#777;text-decoration:none;display:block;margin-top:2px}
+.btn-gold{background:#F0D06A;color:#000;padding:9px 18px;border-radius:10px;font-weight:900;text-decoration:none;box-shadow:0 0 12px #F0D06A}
+.bar{position:sticky;bottom:0;padding:10px;background:#08080E;border-top:1px solid #222;display:flex;gap:6px}
+.bar input{flex:1;background:#000;border:1px solid #222;border-radius:10px;padding:11px;color:#fff}
+.bar button{border:0;border-radius:10px;padding:0 14px;font-weight:900}
+</style></head>
+<body>
+<div class="app">
+<div class="top"><b>OPULATIX // OREXA</b><span style="font-size:7px;color:#555;border:1px solid #222;padding:3px 7px;border-radius:99px">ShaunPiscopo53</span></div>
+<div class="big">YOUR<br>PRIVATE<br><span style="color:#F0D06A">SHOP</span></div>
+<div class="payid"><b>PAYID / PAYPAL</b><span>pinnireapozoid@gmail.com</span></div>
+<div class="list">
+<div class="row hot"><div><b>01 AOI</b><s>HOT • CAM + SCAN</s></div><div style="width:8px;height:8px;background:#F0D06A;border-radius:50%;box-shadow:0 0 8px #F0D06A"></div></div>
+<div class="row cold"><div><b>02 PROOF</b><s>COLD • HASH LOCK</s></div><div style="width:8px;height:8px;background:#5CC8DF;border-radius:50%;box-shadow:0 0 8px #5CC8DF"></div></div>
+<div class="row hot"><div><b>03 BATTERY</b><s>HOT • CORE</s></div><div style="width:8px;height:8px;background:#F0D06A;border-radius:50%"></div></div>
+<div class="row cold"><div><b>04 COLLAR</b><s>COLD • ID</s></div><div style="width:8px;height:8px;background:#5CC8DF;border-radius:50%"></div></div>
+<div class="row hot"><div><b>05 BOOST</b><s>HOT • 4G UPLINK</s></div><div style="font-size:7px">4G</div></div>
+<div class="row" style="background:#18150E;border-color:#F0D06A"><div><b style="color:#F0D06A">07 SHARK TANK</b><s style="color:#F0D06A">PAY TO pinnireapozoid@gmail.com</s></div><a class="btn-gold" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=pinnireapozoid@gmail.com&currency_code=AUD&item_name=OPULATIX&no_shipping=1">PAY</a></div>
+</div>
+<div class="bar"><input id="amt" type="number" placeholder="AUD amount"><button onclick="let a=document.getElementById('amt').value;window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=pinnireapozoid@gmail.com&currency_code=AUD&amount='+a+'&item_name=OPULATIX','_blank')" style="background:#fff;color:#000">PAY $</button><button onclick="navigator.clipboard.writeText('pinnireapozoid@gmail.com');alert('COPIED: pinnireapozoid@gmail.com')" style="background:#F0D06A;color:#000">COPY</button></div>
+</div>
+</body></html>
