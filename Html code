@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OPULATRIX HQ</title>
-<style>body{margin:0;background:#000}img{width:100%;display:block}</style>
+<style>
+body{background:#000;color:#ffef00;margin:0;font-family:monospace;text-align:center}
+.top{border-bottom:2px solid #ffef00;padding:10px;font-weight:bold}
+.brain{margin:30px auto;border:3px solid #ffef00;width:80%;padding:20px;border-radius:20px}
+.branch{border:1px solid #ffef00;margin:10px;padding:15px;border-radius:12px}
+a{color:#ffef00;text-decoration:none}
+</style>
 </head>
 <body>
-<img src="hq.jpg">
+<div class="top">OPULATIX HQ // MELB • LIVE</div>
+
+<div class="brain">
+<h1>CODE BRAIN // TOP MIDDLE</h1>
+<p>ONE AGENT - BRAIN STEM</p>
+<div id="driver-status">booting...</div>
+</div>
+
+<div class="branch"><a href="shop-front/">SHOP-FRONT DUTY</a></div>
+<div class="branch"><a href="workshop/">WORKSHOP DUTY</a></div>
+<div class="branch"><a href="wallet/">WALLET / BANKER DUTY</a></div>
+<div class="branch"><a href="phone-agent/">PHONE-AGENT / VOICE DUTY</a></div>
+<div class="branch"><a href="guards/">7 GUARDS DUTY</a></div>
+<div class="branch"><a href="ship-racks/">SHIP-RACKS DUTY</a></div>
+
+<script type="module" src="driver.js"></script>
+<script>
+document.getElementById('driver-status').innerText = "BRAIN STEM ONLINE - WAITING FOR driver.js";
+</script>
 </body>
 </html>
