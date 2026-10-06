@@ -26,3 +26,16 @@ async function bootBrain() {
 }
 
 bootBrain();
+CODE BRAIN // top middle
+  driver.js  <- ONE RUN, runs all branches
+
+  shop-front/
+    up01/
+      index.html  <- your code you pasted
+      up01.js     <- KEEP its own JavaScript, don't delete it
+    up02/
+      index.html  <- next code you paste
+      up02.js     <- its OWN JavaScript
+
+  workshop/
+    build01.js <- its own
