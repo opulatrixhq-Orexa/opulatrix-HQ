@@ -39,3 +39,18 @@ CODE BRAIN // top middle
 
   workshop/
     build01.js <- its own
+// workshop/storage.js - STORAGE THAT BRAIN CHARGES
+export const storage = {
+  charge: function(data) {
+    console.log("BRAIN CHARGING STORAGE:", data);
+    localStorage.setItem('opulatrix_memory', JSON.stringify(data));
+    return "charged";
+  },
+  recall: function() {
+    try {
+      return JSON.parse(localStorage.getItem('opulatrix_memory') || "{}");
+    } catch(e) {
+      return {};
+    }
+  }
+};
