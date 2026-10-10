@@ -33,3 +33,36 @@ document.getElementById('driver-status').innerText = "BRAIN STEM ONLINE - WAITIN
 </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPULATRIX HQ | Vegan Wellness</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<div class="logo">ORAX <span>VEGAN</span></div>
+<nav><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</header>
+
+<section class="hero">
+<h1>Plant Based. Pure Future.</h1>
+<p>Innovative solutions for suitable future.</p>
+<button id="shopNow">Shop Now - $25</button>
+</section>
+
+<section id="shop" class="products">
+<div class="card"><h3>Vegan Essentials Kit</h3><p>$25 - Clean, Secure, ORAX Approved</p><button class="buyBtn">Add to Cart</button></div>
+<div class="card"><h3>Plant Protein+</h3><p>$45 - 500 usernames live approved</p><button class="buyBtn">Add to Cart</button></div>
+<div class="card"><h3>ORAX Wellness Box</h3><p>$100 - Phase 1 Rollout</p><button class="buyBtn">Add to Cart</button></div>
+</section>
+
+<footer>
+<p>OPULATRIXHQ-OREXA — ORAX APPROVED | Q-Code Locked | TTP Linked</p>
+<p>Contact: opulatrixhq@gmail.com</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
