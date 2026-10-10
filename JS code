@@ -1,17 +1,1 @@
-// ORAX-VAULT-10-XXXX - Secure token, auto-links via security protocols
-const ORAX_CONFIG = {
-  vaultToken: "ORAX-VAULT-10-XXXX",
-  qCodeLocked: true,
-  ttpLinked: true,
-  gateway: "secure_proxy"
-};
 
-document.querySelectorAll('.buyBtn, #shopNow').forEach(btn=>{
-  btn.addEventListener('click', async ()=>{
-    // Q-Code verification before payment
-    console.log("Verifying via", ORAX_CONFIG.vaultToken);
-    alert("Redirecting to secure checkout - ORAX APPROVED\nQ-Code Locked ✓\nTTP Linked ✓");
-    // Your Stripe / payment link here
-    // window.location.href = "YOUR_CHECKOUT_URL";
-  });
-});
