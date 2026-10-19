@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPULATRIX HQ // MELB ● LIVE</title>
+<style>
+  :root{--gold:#D4AF37;--black:#0a0a0a;--dark:#111;}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--black);color:#fff;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+  header{padding:20px;text-align:center;border-bottom:2px solid var(--gold)}
+  header h1{font-size:2.8rem;letter-spacing:6px;color:var(--gold);font-weight:900}
+  header p{letter-spacing:3px;font-size:0.9rem;color:#888;margin-top:5px}
+  .ticker{background:var(--gold);color:#000;white-space:nowrap;overflow:hidden;padding:10px 0;font-weight:900;letter-spacing:2px}
+  .ticker span{display:inline-block;animation:scroll 25s linear infinite}
+  @keyframes scroll{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+  .hero{padding:60px 20px;text-align:center;background:radial-gradient(circle at center,#1a1a1a 0%,#000 100%)}
+  .hero h2{font-size:3.5rem;color:var(--gold);margin-bottom:15px}
+  .hero p{color:#aaa;max-width:600px;margin:0 auto 30px;line-height:1.6}
+  .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;padding:40px;max-width:1100px;margin:0 auto}
+  .card{background:var(--dark);border:1px solid #222;border-radius:12px;padding:30px;text-align:center}
+  .card.gold{border-color:var(--gold);box-shadow:0 0 30px rgba(212,175,55,0.2)}
+  .card h3{color:var(--gold);font-size:1.5rem;margin-bottom:10px;letter-spacing:2px}
+  .card .price{font-size:1.6rem;font-weight:900;margin:15px 0;color:#fff}
+  .card .status{padding:8px 16px;border-radius:20px;font-size:0.8rem;font-weight:700;display:inline-block;margin-bottom:15px}
+  .out{background:#333;color:#888}
+  .live{background:var(--gold);color:#000}
+  .btn{display:block;width:100%;padding:16px;background:var(--gold);color:#000;text-decoration:none;border-radius:8px;font-weight:900;letter-spacing:2px;margin-top:15px;text-align:center}
+  .btn:hover{background:#fff}
+  footer{padding:40px;text-align:center;border-top:1px solid #222;color:#444;font-size:0.8rem;letter-spacing:2px}
+  footer b{color:var(--gold)}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>OPULATRIX OREXA</h1>
+  <p>OPULATRIX HQ // MELB ● LIVE</p>
+</header>
+
+<div class="ticker">
+  <span>★ STREET KIT - OUT OF STOCK ★ OREXA CORE - PRIVATE ACCESS ★ EMAIL FOR PRICING ★ HOME AND FAMILY ONLY ★ OPULATRIX OREXA ★ PRIVATE SHOP ★ MEMBERS ONLY ★ 24/7 SECURE ACCESS ★</span>
+</div>
+
+<div class="hero">
+  <h2>YOUR PRIVATE SHOP</h2>
+  <p>Members Only • 24/7 • Secure Access • Entry By Invite Only - No Public Access.<br>Contact via email for private pricing. Home & Family locked - Master Voice ID: SHAUN.</p>
+</div>
+
+<div class="products">
+  <div class="card">
+    <h3>STREET KIT</h3>
+    <div class="status out">OUT OF STOCK</div>
+    <div class="price">COMING SOON</div>
+    <p style="color:#666;font-size:0.9rem">Apparel - Not Available Yet</p>
+    <a class="btn" href="mailto:pinnireapozoid@gmail.com?subject=STREET KIT - Notify Me">NOTIFY ME</a>
+  </div>
+
+  <div class="card gold">
+    <h3>OREXA CORE</h3>
+    <div class="status live">● PRIVATE ACCESS</div>
+    <div class="price">CONTACT FOR PRICE</div>
+    <p style="color:#aaa;font-size:0.9rem">Full Core System - Email for private pricing & invite</p>
+    <a class="btn" href="mailto:pinnireapozoid@gmail.com?subject=OREXA CORE - Private Price Request">EMAIL FOR PRICING</a>
+    <p style="margin-top:15px;color:#666;font-size:0.85rem">pinnireapozoid@gmail.com</p>
+  </div>
+</div>
+
+<footer>
+  <p><b>OPULATRIX HQ</b> // MELB ● LIVE</p>
+  <p style="margin-top:10px">HOME AND FAMILY ONLY - SHAUN MASTER VOICE ID - PRIVATE REPO LOCKED</p>
+  <p style="margin-top:10px">© 2026 OPULATRIX OREXA - YOUR PRIVATE SHOP - SECURE - DISCREET - ALWAYS OPEN</p>
+</footer>
+
+</body>
+</html>
